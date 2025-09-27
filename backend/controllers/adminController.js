@@ -6,8 +6,8 @@ const { hashPassword } = require('../utils/passwordUtils');
 
 function validateUserData(name, email, password, address, role) {
     const errors = [];
-    if (!name || name.length < 20 || name.length > 60) {
-        errors.push('Name must be between 20 and 60 characters.');
+    if (!name || name.length < 8 || name.length > 20) {
+        errors.push('Name must be between 8 and 20 characters.');
     }
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         errors.push('Invalid email format.');
@@ -26,8 +26,8 @@ function validateUserData(name, email, password, address, role) {
 
 function validateStoreData(name, address) {
     const errors = [];
-    if (!name || name.length < 20 || name.length > 60) {
-        errors.push('Store name must be between 20 and 60 characters.');
+    if (!name || name.length < 8 || name.length > 20) {
+        errors.push('Store name must be between 8 and 20 characters.');
     }
     if (!address || address.length > 400) {
         errors.push('Store address cannot exceed 400 characters.');

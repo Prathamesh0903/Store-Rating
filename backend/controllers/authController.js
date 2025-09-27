@@ -4,8 +4,8 @@ const { generateToken } = require('../utils/jwtUtils');
 
 function validateUserRegistration(name, email, password, address) {
     const errors = [];
-    if (!name || name.length < 3 || name.length > 60) {
-        errors.push('Name must be between 3 and 60 characters.');
+    if (!name || name.length < 8 || name.length > 20) {
+        errors.push('Name must be between 8 and 20 characters.');
     }
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         errors.push('Invalid email format.');
@@ -20,11 +20,16 @@ function validateUserRegistration(name, email, password, address) {
 }
 
 async function registerUser(req, res) {
-    const { name, email, password, address } = req.body;
+    const { name, email, password, address, role } = req.body;
     const validationErrors = validateUserRegistration(name, email, password, address);
     if (validationErrors.length > 0) {
         return res.status(400).json({ message: 'Validation failed', errors: validationErrors });
     }
+    
+    // Validate role
+    const validRoles = ['Normal User', 'Store Owner'];
+    const userRole = role === 'Store Owner' ? 'Store Owner' : 'Normal User';
+    
     try {
         const existingUser = await userModel.findUserByEmail(email);
         if (existingUser) {
@@ -36,7 +41,7 @@ async function registerUser(req, res) {
             email,
             hashedPassword,
             address: address || null,
-            role: 'Normal User'
+            role: userRole
         });
         if (newUser) {
             const token = generateToken(newUser);

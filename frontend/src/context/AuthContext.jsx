@@ -50,6 +50,22 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
+  const signup = useCallback(async (userData) => {
+    setLoading(true);
+    try {
+      const data = await authService.signup(userData);
+      setToken(data.token);
+      setUser(data.user);
+      setUserState(data.user);
+      return data.user;
+    } catch (error) {
+      console.error('Signup failed:', error);
+      throw error.response?.data?.message || 'Failed to sign up. Please check your information.';
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
   
   const refreshUser = useCallback((newUser) => {
     setUser(newUser);
@@ -64,10 +80,11 @@ export const AuthProvider = ({ children }) => {
     isStoreOwner: user?.role === 'Store Owner',
     isNormalUser: user?.role === 'Normal User',
     login,
+    signup,
     logout,
     loading,
     refreshUser,
-  }), [user, loading, login, logout, refreshUser]);
+  }), [user, loading, login, signup, logout, refreshUser]);
 
 
   return (

@@ -105,8 +105,8 @@ const StoreManagementPage = () => {
 
   const validateDialogForm = () => {
     const errors = [];
-    if (!dialogFormData.name || dialogFormData.name.length < 20 || dialogFormData.name.length > 60) {
-      errors.push('Store name must be between 20 and 60 characters.');
+    if (!dialogFormData.name || dialogFormData.name.length < 8 || dialogFormData.name.length > 20) {
+      errors.push('Store name must be between 8 and 20 characters.');
     }
     if (!dialogFormData.address || dialogFormData.address.length > 400) {
       errors.push('Store address cannot exceed 400 characters.');

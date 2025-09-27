@@ -22,8 +22,8 @@ export const validateEmail = (email) => {
 
   export const validateName = (name) => {
     if (!name) return "Name is required.";
-    if (name.length < 20 || name.length > 60) {
-      return "Name must be between 20 and 60 characters.";
+    if (name.length < 8 || name.length > 20) {
+      return "Name must be between 8 and 20 characters.";
     }
     return '';
   };
