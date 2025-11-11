@@ -125,7 +125,7 @@ const Navbar = ({ handleDrawerToggle }) => {
                     WebkitTextFillColor: 'transparent',
                   }}
                 >
-                  StoreRating Pro
+                  ProductRating Pro
                 </Typography>
               </Stack>
             </Link>

@@ -12,7 +12,7 @@ const GuestLayout = () => {
       </Container>
       <Box component="footer" sx={{ p: 2, mt: 'auto', bgcolor: 'primary.main', color: 'white', textAlign: 'center' }}>
         <Typography variant="body2">
-          &copy; {new Date().getFullYear()} Store Rating Platform
+          &copy; {new Date().getFullYear()} Product Rating Platform
         </Typography>
       </Box>
     </Box>

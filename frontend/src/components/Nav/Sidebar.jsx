@@ -75,7 +75,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle }) => {
                   WebkitTextFillColor: 'transparent',
                 }}
               >
-                StoreRating Pro
+                ProductRating Pro
               </Typography>
               <Typography variant="caption" sx={{ color: 'text.secondary', fontWeight: 500 }}>
                 Professional Platform
@@ -183,7 +183,7 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle }) => {
           display: 'block',
           fontWeight: 500,
         }}>
-          © 2024 StoreRating Pro
+          © 2024 ProductRating Pro
         </Typography>
       </Box>
     </Box>

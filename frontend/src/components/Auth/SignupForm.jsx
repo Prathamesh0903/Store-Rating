@@ -88,10 +88,10 @@ const SignupForm = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
           }}>
-            StoreRating Pro
+            ProductRating Pro
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary', fontWeight: 500 }}>
-            Professional Store Rating Platform
+            Professional Product Rating Platform
           </Typography>
         </Box>
       </Stack>

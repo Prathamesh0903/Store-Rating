@@ -1,8 +1,17 @@
-# Store Rating System
+# ProductRating Pro - Professional Product Rating Platform
 
-A full-stack web application that allows users to find and rate stores. It features distinct roles for normal users, store owners, and system administrators, providing a comprehensive platform for managing and viewing store ratings.
+A modern, full-stack web application that provides a comprehensive platform for store discovery, rating, and management. Built with professional UI/UX design, it features distinct roles for normal users, store owners, and system administrators, offering an enterprise-grade solution for product rating and review management.
 
-This project is built with a Node.js/Express backend, a React frontend, and a MySQL database.
+This project is built with a Node.js/Express backend, a React frontend with Material-UI, and a MySQL database.
+
+## 🎨 Professional Design Features
+
+- **Modern Glassmorphism UI**: Beautiful backdrop blur effects and transparency
+- **Professional Color Scheme**: Modern indigo and pink gradients throughout
+- **Responsive Design**: Mobile-first approach with perfect scaling
+- **Smooth Animations**: Hover effects, transitions, and micro-interactions
+- **Professional Typography**: Inter font family with optimized weights
+- **Enterprise-Grade Styling**: Professional shadows, spacing, and visual hierarchy
 
 ## Table of Contents
 
@@ -18,45 +27,61 @@ This project is built with a Node.js/Express backend, a React frontend, and a My
 - [Default Credentials](#default-credentials)
 - [API Endpoints](#api-endpoints)
 
-## Features
+## ✨ Features
 
+### 🔐 **Authentication & User Management**
+- **Professional Signup/Login**: Modern glassmorphism forms with role selection
 - **Role-Based Access Control:**
-  - **System Administrator:** Full control over users and stores. Can view system-wide metrics.
-  - **Store Owner:** Can view a dashboard with analytics for their own stores, including average ratings and user feedback.
-  - **Normal User:** Can browse, search, and rate stores. Can only rate a store once but can update their rating.
+  - **System Administrator:** Full control over users and stores with comprehensive analytics
+  - **Store Owner:** Advanced dashboard with store analytics and performance metrics
+  - **Normal User:** Intuitive store discovery and rating experience
+- **Smart Redirection**: Automatic role-based navigation after authentication
+- **Secure Authentication**: JWT-based authentication with password hashing
 
-- **Store Management:**
-  - Admins can create, read, update, and delete any store.
-  - Admins can assign stores to Store Owners.
+### 🏪 **Store Management**
+- **Professional Store Directory**: Beautiful card-based layout with search and filtering
+- **Advanced Analytics**: Real-time statistics and performance metrics
+- **Store Assignment**: Admins can assign stores to Store Owners
+- **Rating System**: 1-5 star rating system with average calculations
+- **Professional UI**: Modern cards with hover effects and smooth animations
 
-- **User Management:**
-  - Admins can create, read, update, and delete any user.
-  - Users can register and log in.
+### 📊 **Dashboard & Analytics**
+- **Role-Specific Dashboards**: Tailored experiences for each user type
+- **Real-Time Statistics**: Live data updates and performance metrics
+- **Professional Data Tables**: Sortable, filterable tables with modern styling
+- **Visual Analytics**: Charts and graphs for data visualization
 
-- **Rating System:**
-  - Users can submit ratings from 1 to 5 for stores.
-  - Average ratings are calculated for each store and for each store owner's portfolio.
-  - Stores with no ratings display a rating of 0.
+### 🎨 **User Experience**
+- **Modern Navigation**: Professional sidebar and navbar with glassmorphism effects
+- **Responsive Design**: Perfect experience across all devices
+- **Loading States**: Professional loading spinners and feedback
+- **Error Handling**: Comprehensive error messages and user feedback
+- **Accessibility**: ARIA labels and semantic HTML structure
 
-- **Dynamic UI:**
-  - Search and filter functionality for stores and users.
-  - Sortable lists for stores and users.
+## 🛠️ Tech Stack
 
-## Tech Stack
+### **Backend:**
+- [Node.js](https://nodejs.org/) - JavaScript runtime
+- [Express.js](https://expressjs.com/) - Web framework
+- [MySQL2](https://github.com/sidorares/node-mysql2) - Database connection
+- [JSON Web Tokens (JWT)](https://jwt.io/) - Authentication
+- [bcrypt.js](https://github.com/dcodeIO/bcrypt.js) - Password hashing
+- [CORS](https://github.com/expressjs/cors) - Cross-origin resource sharing
 
-- **Backend:**
-  - [Node.js](https://nodejs.org/)
-  - [Express.js](https://expressjs.com/)
-  - [MySQL2](https://github.com/sidorares/node-mysql2) for database connection.
-  - [JSON Web Tokens (JWT)](https://jwt.io/) for authentication.
-  - [bcrypt.js](https://github.com/dcodeIO/bcrypt.js) for password hashing.
+### **Frontend:**
+- [React](https://reactjs.org/) - UI library
+- [Material-UI (MUI)](https://mui.com/) - Professional component library
+- [Axios](https://axios-http.com/) - HTTP client
+- [React Router](https://reactrouter.com/) - Client-side routing
+- [Inter Font](https://fonts.google.com/specimen/Inter) - Professional typography
 
-- **Frontend:**
-  - [React](https://reactjs.org/)
-  - [Axios](https://axios-http.com/) for API requests.
+### **Database:**
+- [MySQL](https://www.mysql.com/) - Relational database
 
-- **Database:**
-  - [MySQL](https://www.mysql.com/)
+### **Development Tools:**
+- [Vite](https://vitejs.dev/) - Fast build tool
+- [ESLint](https://eslint.org/) - Code linting
+- [Git](https://git-scm.com/) - Version control
 
 ## Prerequisites
 
@@ -71,7 +96,7 @@ Ensure you have the following installed on your system:
 1.  **Clone or download this repository:**
     ```bash
     git clone <your-repo-url>
-    cd store-rating-platform
+    cd product-rating-platform
     ```
 
 ### Database Setup
@@ -93,7 +118,7 @@ Ensure you have the following installed on your system:
 
     CREATE TABLE `users` (
       `id` int NOT NULL AUTO_INCREMENT,
-      `name` varchar(60) NOT NULL,
+      `name` varchar(20) NOT NULL,
       `email` varchar(255) NOT NULL,
       `password` varchar(255) NOT NULL,
       `address` varchar(400) DEFAULT NULL,
@@ -104,7 +129,7 @@ Ensure you have the following installed on your system:
 
     CREATE TABLE `stores` (
       `id` int NOT NULL AUTO_INCREMENT,
-      `name` varchar(60) NOT NULL,
+      `name` varchar(20) NOT NULL,
       `address` varchar(400) NOT NULL,
       `owner_id` int DEFAULT NULL,
       PRIMARY KEY (`id`),
@@ -152,6 +177,7 @@ Ensure you have the following installed on your system:
 
 1.  Navigate to the frontend directory: `cd frontend`
 2.  Install dependencies: `npm install`
+3.  The frontend uses Vite for fast development and building
 
 ## Environment Variables
 
@@ -171,7 +197,7 @@ DB_NAME=platformDB
 JWT_SECRET=a_very_strong_and_secret_key_for_jwt
 ```
 
-## Running the Application
+## 🚀 Running the Application
 
 You need to run the backend and frontend servers in separate terminal windows.
 
@@ -185,19 +211,42 @@ You need to run the backend and frontend servers in separate terminal windows.
 2.  **Start the Frontend Development Server:**
     ```bash
     cd frontend
-    npm start
+    npm run dev
     ```
-    The React application will open in your browser, typically at `http://localhost:3001`.
+    The React application will open in your browser, typically at `http://localhost:5173` (Vite default port).
+
+## 🎯 Key Improvements
+
+### **Professional UI/UX**
+- ✅ Modern glassmorphism design with backdrop blur effects
+- ✅ Professional color scheme with indigo and pink gradients
+- ✅ Responsive design that works perfectly on all devices
+- ✅ Smooth animations and hover effects throughout
+- ✅ Professional typography using Inter font family
+
+### **Enhanced Authentication**
+- ✅ Professional signup form with role selection
+- ✅ Smart redirection based on user role after authentication
+- ✅ Updated validation (8-20 characters for names)
+- ✅ Enhanced error handling and user feedback
+
+### **Modern Development Experience**
+- ✅ Vite for fast development and building
+- ✅ Material-UI for professional components
+- ✅ ESLint for code quality
+- ✅ Professional project structure
 
 
-## API Endpoints
+## 📡 API Endpoints
 
 All endpoints are prefixed with `/api`.
 
 | Method | Endpoint                               | Role(s) Required       | Description                                                              |
 |--------|----------------------------------------|------------------------|--------------------------------------------------------------------------|
-| `POST` | `/auth/register`                       | Public                 | Register a new user.                                                     |
+| `POST` | `/auth/signup`                         | Public                 | Register a new user with role selection.                                 |
 | `POST` | `/auth/login`                          | Public                 | Log in and receive a JWT.                                                |
+| `POST` | `/auth/logout`                         | Authenticated          | Log out and invalidate token.                                            |
+| `PUT`  | `/auth/password`                       | Authenticated          | Update user password.                                                    |
 | `GET`  | `/stores`                              | Public                 | Get a list of all stores with search and sort options.                   |
 | `POST` | `/stores/:storeId/rate`                | Normal User            | Submit or update a rating for a specific store.                          |
 | `GET`  | `/store-owner/dashboard`               | Store Owner            | Get dashboard data, including owned stores and overall average rating.   |
@@ -210,4 +259,33 @@ All endpoints are prefixed with `/api`.
 | `POST` | `/admin/stores`                        | System Administrator   | Create a new store.                                                      |
 | `PUT`  | `/admin/stores/:id`                    | System Administrator   | Update a store's details, including assigning an owner.                  |
 | `DELETE`| `/admin/stores/:id`                   | System Administrator   | Delete a store.                                                          |
+
+## 🎨 Design System
+
+### **Color Palette**
+- **Primary**: Indigo (#6366f1) with purple gradient (#8b5cf6)
+- **Secondary**: Pink (#ec4899) with light pink gradient (#f472b6)
+- **Success**: Green (#10b981) with emerald gradient (#34d399)
+- **Warning**: Amber (#f59e0b) with yellow gradient (#fbbf24)
+- **Error**: Red (#ef4444) with light red gradient (#f87171)
+
+### **Typography**
+- **Font Family**: Inter (300-900 weights)
+- **Headings**: 800 weight with optimized line heights
+- **Body Text**: 400 weight with 1.6 line height
+- **Buttons**: 600 weight with letter spacing
+
+### **Components**
+- **Border Radius**: 12px for cards, 8px for buttons
+- **Shadows**: 25-level shadow system for depth
+- **Spacing**: 8px base unit with consistent spacing scale
+- **Animations**: 0.2s ease-in-out transitions
+
+## 📱 Responsive Design
+
+- **Mobile First**: Optimized for mobile devices
+- **Breakpoints**: xs (0px), sm (600px), md (900px), lg (1200px), xl (1536px)
+- **Navigation**: Collapsible sidebar on mobile
+- **Cards**: Responsive grid layout
+- **Typography**: Fluid typography that scales with screen size
 

@@ -22,7 +22,7 @@ app.use('/api/stores', userStoreRoutes);
 app.use('/api/ratings', ratingRoutes);
 
 app.get('/', (req, res) => {
-    res.send('Store Rating Platform backend is running');
+    res.send('Product Rating Platform backend is running');
 });
 
 app.use((err, req, res, next) => {

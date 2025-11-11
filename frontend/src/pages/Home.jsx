@@ -93,7 +93,7 @@ const HomePage = () => {
                 textShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
               }}
             >
-              Welcome to StoreRating Pro
+              Welcome to ProductRating Pro
             </Typography>
             <Typography 
               variant={isMobile ? 'h6' : 'h4'} 
@@ -193,7 +193,7 @@ const HomePage = () => {
       <Container sx={{ py: 8 }}>
         <Box sx={{ textAlign: 'center', mb: 8 }}>
           <Typography variant="h3" sx={{ fontWeight: 800, mb: 3, color: 'text.primary' }}>
-            Why Choose StoreRating Pro?
+            Why Choose ProductRating Pro?
           </Typography>
           <Typography variant="h6" sx={{ color: 'text.secondary', maxWidth: '600px', mx: 'auto' }}>
             We provide a comprehensive platform for store discovery, rating, and management with professional-grade features.
@@ -318,7 +318,7 @@ const HomePage = () => {
             Ready to Get Started?
           </Typography>
           <Typography variant="h6" sx={{ mb: 6, opacity: 0.9, maxWidth: '600px', mx: 'auto' }}>
-            Join thousands of users who trust StoreRating Pro for their store discovery and rating needs.
+            Join thousands of users who trust ProductRating Pro for their product discovery and rating needs.
           </Typography>
           
           {!isAuthenticated && (
@@ -379,13 +379,13 @@ const HomePage = () => {
       }}>
         <Container>
           <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-            StoreRating Pro
+            ProductRating Pro
           </Typography>
           <Typography variant="body2" sx={{ opacity: 0.8, mb: 3 }}>
-            Professional store rating and review platform for businesses and customers.
+            Professional product rating and review platform for businesses and customers.
           </Typography>
           <Typography variant="body2" sx={{ opacity: 0.6 }}>
-            &copy; {new Date().getFullYear()} StoreRating Pro. All rights reserved.
+            &copy; {new Date().getFullYear()} ProductRating Pro. All rights reserved.
           </Typography>
         </Container>
       </Box>
