@@ -1,6 +1,6 @@
-# 🚀 ProductRating Pro - Deployment Guide
+# 🚀 StoreRating Pro - Deployment Guide
 
-This guide covers multiple deployment options for the ProductRating Pro full-stack application.
+This guide covers multiple deployment options for the StoreRating Pro full-stack application.
 
 ## 📋 Prerequisites
 
@@ -123,7 +123,7 @@ This guide covers multiple deployment options for the ProductRating Pro full-sta
 
 2. **app.yaml configuration:**
    ```yaml
-   name: product-rating-platform
+   name: store-rating-platform
    services:
    - name: backend
      source_dir: backend
@@ -179,7 +179,7 @@ This guide covers multiple deployment options for the ProductRating Pro full-sta
 
 3. **Backend Service Setup:**
    - **Connect Repository:** Select your GitHub repository
-   - **Name:** `product-rating-backend`
+   - **Name:** `store-rating-backend`
    - **Root Directory:** `backend`
    - **Environment:** `Node`
    - **Build Command:** `npm install`
@@ -199,7 +199,7 @@ This guide covers multiple deployment options for the ProductRating Pro full-sta
 
 5. **Database Setup (Render PostgreSQL):**
    - Click "New +" → "PostgreSQL"
-   - **Name:** `product-rating-db`
+   - **Name:** `store-rating-db`
    - **Database:** `platformDB`
    - **User:** Auto-generated
    - **Password:** Auto-generated
@@ -208,7 +208,7 @@ This guide covers multiple deployment options for the ProductRating Pro full-sta
 6. **Frontend Service Setup:**
    - Click "New +" → "Static Site"
    - **Connect Repository:** Same GitHub repository
-   - **Name:** `product-rating-frontend`
+   - **Name:** `store-rating-frontend`
    - **Root Directory:** `frontend`
    - **Build Command:** `npm install && npm run build`
    - **Publish Directory:** `dist`
@@ -330,7 +330,7 @@ This guide covers multiple deployment options for the ProductRating Pro full-sta
    ```bash
    # Clone repository
    git clone your-repo-url
-   cd product-rating-platform
+   cd store-rating-platform
    
    # Install dependencies
    cd backend && npm install
@@ -338,7 +338,7 @@ This guide covers multiple deployment options for the ProductRating Pro full-sta
    
    # Start with PM2
    cd ../backend
-   pm2 start app.js --name "product-rating-backend"
+   pm2 start app.js --name "store-rating-backend"
    pm2 startup
    pm2 save
    ```
@@ -348,7 +348,7 @@ This guide covers multiple deployment options for the ProductRating Pro full-sta
    sudo apt install nginx -y
    
    # Create nginx config
-   sudo nano /etc/nginx/sites-available/product-rating
+   sudo nano /etc/nginx/sites-available/store-rating
    ```
 
    ```nginx

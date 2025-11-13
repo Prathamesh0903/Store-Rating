@@ -1,6 +1,6 @@
-# ProductRating Pro - Professional Product Rating Platform
+# StoreRating Pro - Professional Store Rating Platform
 
-A modern, full-stack web application that provides a comprehensive platform for store discovery, rating, and management. Built with professional UI/UX design, it features distinct roles for normal users, store owners, and system administrators, offering an enterprise-grade solution for product rating and review management.
+A modern, full-stack web application that provides a comprehensive platform for store discovery, rating, and management. Built with professional UI/UX design, it features distinct roles for normal users, store owners, and system administrators, offering an enterprise-grade solution for store rating and review management.
 
 This project is built with a Node.js/Express backend, a React frontend with Material-UI, and a MySQL database.
 
@@ -96,7 +96,7 @@ Ensure you have the following installed on your system:
 1.  **Clone or download this repository:**
     ```bash
     git clone <your-repo-url>
-    cd product-rating-platform
+    cd store-rating-platform
     ```
 
 ### Database Setup

@@ -475,7 +475,7 @@ const StoreListPage = () => {
               How would you rate this store?
             </Typography>
             <Rating
-              name="product-rating"
+              name="store-rating"
               value={currentRating}
               onChange={(event, newValue) => {
                 setCurrentRating(newValue);

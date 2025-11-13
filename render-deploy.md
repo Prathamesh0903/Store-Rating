@@ -1,4 +1,4 @@
-# 🚀 Render Deployment Guide - ProductRating Pro
+# 🚀 Render Deployment Guide - StoreRating Pro
 
 ## Quick Start (5 Minutes)
 
@@ -19,7 +19,7 @@ git push origin main
 #### 🔧 Backend Service (Web Service)
 - Click "New +" → "Web Service"
 - **Connect Repository:** Your GitHub repo
-- **Name:** `product-rating-backend`
+- **Name:** `store-rating-backend`
 - **Root Directory:** `backend`
 - **Environment:** `Node`
 - **Build Command:** `npm install`
@@ -28,14 +28,14 @@ git push origin main
 
 #### 🗄️ Database Service (PostgreSQL)
 - Click "New +" → "PostgreSQL"
-- **Name:** `product-rating-db`
+- **Name:** `store-rating-db`
 - **Database:** `platformDB`
 - **Plan:** Free (or Starter for production)
 
 #### 🎨 Frontend Service (Static Site)
 - Click "New +" → "Static Site"
 - **Connect Repository:** Same GitHub repo
-- **Name:** `product-rating-frontend`
+- **Name:** `store-rating-frontend`
 - **Root Directory:** `frontend`
 - **Build Command:** `npm install && npm run build`
 - **Publish Directory:** `dist`
@@ -165,8 +165,8 @@ git push origin main
 ## 🔗 Your Live URLs
 
 After deployment, you'll get:
-- **Backend API:** `https://product-rating-backend.onrender.com`
-- **Frontend App:** `https://product-rating-frontend.onrender.com`
+- **Backend API:** `https://store-rating-backend.onrender.com`
+- **Frontend App:** `https://store-rating-frontend.onrender.com`
 - **Database:** Internal PostgreSQL connection
 
 ## 🧪 Test Your Deployment
@@ -217,7 +217,7 @@ After deployment, you'll get:
 
 ---
 
-**🎉 Congratulations! Your ProductRating Pro app is now live on Render!**
+**🎉 Congratulations! Your StoreRating Pro app is now live on Render!**
 
 
 
